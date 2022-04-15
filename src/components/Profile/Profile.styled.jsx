@@ -61,6 +61,24 @@ export const StatsInfo = styled.li`
   font-size: 20px;
   margin-right: 10px;
 `;
-export const StatsQuantity = styled.span`
-  margin-left: 5px;
+export const StatisticsLabel = styled.span`
+    display: block;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-weight: normal;
+    line-height: 1.4;
+    font-size: 14px;
+    color: #7a7a7a;
 `;
+
+export const StatsQuantity = styled.span`
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 18px;
+    color: #000;
+`;
+
