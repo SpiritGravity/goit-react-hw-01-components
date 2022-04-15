@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const SocialProfile = styled.div`
   width: 300px;
   border-radius: 4px;

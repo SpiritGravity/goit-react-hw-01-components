@@ -1,29 +1,31 @@
-const Statistics = ({}) => {
-  return (
-<section class="statistics">
-  <h2 class="title">Upload stats</h2>
+import PropTypes from 'prop-types';
+import data from 'components/Statistics/data.json';
+import { Section, Title, StatList, StatItem, StatLabel, StatData } from './Statistics.styled.jsx';
 
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
-  );
-  };
+const Statistics = ({ title, stats }) => {
+  return (
+    <Section>
+    { title && <Title>{title}</Title>}
+    <StatList>
+        {stats.map(({id, label, percentage}) => (
+            <StatItem key={id} name={label}>
+                <StatLabel>{label}</StatLabel>
+                <StatData>{percentage}%</StatData>
+            </StatItem>
+        ))}
+    </StatList>
+</Section>
+)
+};
 
   export default Statistics;
 
+  Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+        })),
+};
