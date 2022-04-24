@@ -1,12 +1,13 @@
 import Profile from 'components/Profile/profile';
 import Statistics from './Statistics/Statistics';
+import FriendList from './FriendList/friendsList';
+import TransactionHistory from './Transaction/transactionHistory';
 import user from '../components/Profile/user.json';
 import data from 'components/Statistics/data.json';
 import friends from 'components/FriendList/friends.json';
-import FriendList from './FriendList/friendsList';
 import transactions from './Transaction/transactions.json';
-import TransactionHistory from './Transaction/transactionHistory';
 import {Wrapper} from './Transaction/transactionHistory.styled';
+
 export const App = () => {
   return (
     <div>
