@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import data from 'components/Statistics/data.json';
 import { Section, Title, StatList, StatItem, StatLabel, StatData } from './Statistics.styled.jsx';
 
 const Statistics = ({ title, stats }) => {

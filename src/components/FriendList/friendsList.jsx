@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import friends from './friends.json';
 import { FriendItem, Status, Avatar,UserName } from './friendList.styled';
 
 const FriendList = ({friends}) => {

@@ -24,7 +24,6 @@ const Profile = ({ username, tag, location, avatar, stats: {followers, views, li
           <ProfileTag>@{tag}</ProfileTag>
           <ProfileLocation>{location}</ProfileLocation>
         </Description>
-      
         <Stats>
         <StatsInfo>
           <StatisticsLabel>Followers</StatisticsLabel>
